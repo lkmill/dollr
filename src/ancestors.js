@@ -3,13 +3,13 @@
 const closest = require('./closest');
 
 module.exports = function (ref, ufo, stop) {
-	const ancestors = [];
+  const ancestors = [];
 
-	let node = ref;
+  let node = ref;
 
-	while (node = closest(node.parentNode, ufo, stop)) {
-		ancestors.push(node);
-	}
+  while (node = closest(node.parentNode, ufo, stop)) {
+    ancestors.push(node);
+  }
 
-	return ancestors;
+  return ancestors;
 };
