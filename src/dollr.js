@@ -28,7 +28,7 @@ function $$(ufo, context) {
       return create(ufo);
 
     if (context)
-      return $$($(context).querySelectorAll(ufo));
+      return $$(context).reduce((result, element) => result.concat($$(element.querySelectorAll(ufo))), []);
 
     return $$(document.querySelectorAll(ufo));
   } else if (ufo instanceof Node) {
