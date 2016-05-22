@@ -39,7 +39,7 @@ function $$(ufo, context) {
     return Array.prototype.slice.call(ufo);
   }
 
-  return null;
+  return [];
 }
 
 function create(htmlString) {
