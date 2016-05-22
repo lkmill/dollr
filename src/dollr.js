@@ -32,7 +32,7 @@ function $$(ufo, context) {
 
     return document.querySelectorAll(ufo);
   } else if (ufo instanceof Node) {
-    return $$([ufo]);
+    return [ufo];
   } else if (ufo instanceof Array) {
     return ufo;
   } else if (ufo instanceof NodeList || ufo instanceof HTMLCollection) {
