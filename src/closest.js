@@ -1,4 +1,4 @@
-import toArray from 'lodash/toArray';
+import { $$ } from './dollr';
 import is from './is';
 
 export default function closest(ref, ufo, stop) {
@@ -12,7 +12,7 @@ export default function closest(ref, ufo, stop) {
     return recurse(element.parentNode);
   }
 
-  if (ufo instanceof NodeList || ufo instanceof HTMLCollection) ufo = toArray(ufo);
+  if (ufo instanceof NodeList || ufo instanceof HTMLCollection) ufo = $$(ufo);
 
   return recurse(ref);
 }
