@@ -1,8 +1,6 @@
-'use strict';
+import insertBefore from './insertBefore';
 
-const insertBefore = require('./insertBefore');
-
-module.exports = function unwrap(element) {
+export default function unwrap(element) {
   const parent = element.parentNode;
 
   while (parent.firstChild) {
@@ -10,4 +8,4 @@ module.exports = function unwrap(element) {
   }
 
   parent.remove();
-};
+}

@@ -1,9 +1,7 @@
-'use strict';
+import { $$ } from './dollr';
 
-const $$ = require('./dollr').$$;
-
-module.exports = function (elements, selector) {
+export default function (elements, selector) {
   elements = $$(elements);
 
   return elements.reduce((result, element) => result + element.textContent.trim(), '');
-};
+}

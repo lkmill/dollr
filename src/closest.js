@@ -1,9 +1,7 @@
-'use strict';
+import toArray from 'lodash/toArray';
+import is from './is';
 
-const toArray = require('lodash/toArray');
-const is = require('./is');
-
-module.exports = function closest(ref, ufo, stop) {
+export default function closest(ref, ufo, stop) {
   function recurse(element) {
     if (!element || stop && is(element, stop) || element === document.documentElement) {
       return null;
@@ -17,4 +15,4 @@ module.exports = function closest(ref, ufo, stop) {
   if (ufo instanceof NodeList || ufo instanceof HTMLCollection) ufo = toArray(ufo);
 
   return recurse(ref);
-};
+}

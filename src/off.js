@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function off(element, eventString, listener) {
+export default function off(element, eventString, listener) {
   const arr = [];
 
   if (eventString) {
@@ -20,4 +18,4 @@ module.exports = function off(element, eventString, listener) {
   }
 
   arr.forEach((item) => element.removeEventListener(item[0], item[1]));
-};
+}

@@ -1,8 +1,6 @@
-'use strict';
+import toArray from 'lodash/toArray';
 
-const toArray = require('lodash/toArray');
-
-module.exports = function (element, selector) {
+export default function (element, selector) {
   let children = toArray(element.children);
 
   // TODO ensure that toArray does not remove an empty array for undefined/null
@@ -13,4 +11,4 @@ module.exports = function (element, selector) {
     children = children.filter((child) => child.matches(selector));
 
   return children;
-};
+}

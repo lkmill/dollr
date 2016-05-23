@@ -1,9 +1,7 @@
-'use strict';
-
-const $$ = require('./dollr').$$;
+import { $$ } from './dollr';
 
 // TODO implement after(nodeList)
-module.exports = function (element, reference) {
+export default function (element, reference) {
   if (reference.parentNode) {
     const next = reference.nextSibling;
 
@@ -21,4 +19,4 @@ module.exports = function (element, reference) {
       });
     }
   }
-};
+}

@@ -1,8 +1,6 @@
-'use strict';
-
 const closest = require('./closest');
 
-module.exports = function (ref, ufo, stop) {
+export default function (ref, ufo, stop) {
   const ancestors = [];
 
   let node = ref;
@@ -12,4 +10,4 @@ module.exports = function (ref, ufo, stop) {
   }
 
   return ancestors;
-};
+}

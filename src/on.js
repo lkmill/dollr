@@ -1,6 +1,4 @@
-'use strict';
-
-const $$ = require('./dollr').$$;
+import { $$ } from './dollr';
 
 function addEvent(element, event, listener, params) {
   if (params) {
@@ -19,7 +17,7 @@ function addEvent(element, event, listener, params) {
   element.__events[event].push(listener);
 }
 
-module.exports = function on(elements, eventString, listener, params) {
+export default function on(elements, eventString, listener, params) {
   const events = eventString.split(' ');
 
   events.forEach((event) => {
@@ -27,4 +25,4 @@ module.exports = function on(elements, eventString, listener, params) {
   });
 
   return this;
-};
+}

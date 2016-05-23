@@ -1,6 +1,13 @@
-'use strict';
+function create(htmlString) {
+  // TODO either format htmlString or make sure no empty text nodes have been created
+  const container = document.createElement('div');
 
-function $(ufo, context) {
+  container.innerHTML = htmlString;
+
+  return container.childNodes;
+}
+
+export function $(ufo, context) {
   if (typeof ufo === 'string') {
     // if it seems to be HTML, create an element
     if (/^\s*</.test(ufo))
@@ -21,7 +28,7 @@ function $(ufo, context) {
   return null;
 }
 
-function $$(ufo, context) {
+export function $$(ufo, context) {
   if (typeof ufo === 'string') {
     // if it seems to be HTML, create an elements
     if (/^\s*</.test(ufo))
@@ -41,17 +48,3 @@ function $$(ufo, context) {
 
   return [];
 }
-
-function create(htmlString) {
-  // TODO either format htmlString or make sure no empty text nodes have been created
-  const container = document.createElement('div');
-
-  container.innerHTML = htmlString;
-
-  return container.childNodes;
-}
-
-module.exports = {
-  $,
-  $$
-};

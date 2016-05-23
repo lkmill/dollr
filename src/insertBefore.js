@@ -1,9 +1,7 @@
-'use strict';
-
-const $$ = require('./dollr').$$;
+import { $$ } from './dollr';
 
 // TODO implement after(nodeList)
-module.exports = function (element, reference) {
+export default function (element, reference) {
   if (reference.parentNode) {
     if (element instanceof Node) {
       reference.parentNode.insertBefore(element, reference);
@@ -16,4 +14,4 @@ module.exports = function (element, reference) {
       });
     }
   }
-};
+}

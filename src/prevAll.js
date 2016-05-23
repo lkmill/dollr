@@ -1,8 +1,6 @@
-'use strict';
+import { $$ } from './dollr';
 
-const $$ = require('./dollr').$$;
-
-module.exports = function (element, selector) {
+export default function (element, selector) {
   const siblings = $$(element.parentNode.children);
 
   let prev = siblings.slice(0, siblings.indexOf(element));
@@ -13,4 +11,4 @@ module.exports = function (element, selector) {
     });
 
   return prev;
-};
+}

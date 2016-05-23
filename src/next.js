@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function (element, selector) {
+export default function (element, selector) {
   let next = element.nextSibling;
 
   while (next && next.nodeType !== 1)
@@ -10,4 +8,4 @@ module.exports = function (element, selector) {
     next = undefined;
 
   return next;
-};
+}
