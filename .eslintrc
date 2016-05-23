@@ -6,6 +6,8 @@
 	},
 
 	"rules": {
+    "no-restricted-syntax": 0,
+    "guard-for-in": 0,
     "import/no-unresolved": 0,
     "no-case-declarations": 0,
     "global-require": 0,
