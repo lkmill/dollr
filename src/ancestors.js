@@ -1,4 +1,4 @@
-const closest = require('./closest');
+import closest from './closest';
 
 export default function (ref, ufo, stop) {
   const ancestors = [];
