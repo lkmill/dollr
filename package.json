@@ -1,6 +1,6 @@
 {
   "name": "dollr",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "DOM library",
   "main": "dollr.js",
   "jsnext:main": "es/dollr.js",
