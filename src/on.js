@@ -1,4 +1,4 @@
-import { $$ } from './dollr';
+import $$ from './dollrs';
 
 function addEvent(element, event, listener, params) {
   if (params) {

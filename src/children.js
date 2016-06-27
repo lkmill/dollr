@@ -1,4 +1,4 @@
-import { $$ } from './dollr';
+import $$ from './dollrs';
 
 export default function (element, selector) {
   let children = element ? $$(element.children) : [];

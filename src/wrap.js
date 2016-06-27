@@ -1,6 +1,6 @@
 import appendTo from './appendTo';
 import insertBefore from './insertBefore';
-import { $ } from './dollr';
+import $ from './dollr';
 
 export default function wrap(element, ufo) {
   // TODO enable by tagName

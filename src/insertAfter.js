@@ -1,4 +1,4 @@
-import { $$ } from './dollr';
+import $$ from './dollrs';
 
 // TODO implement after(nodeList)
 export default function (element, reference) {

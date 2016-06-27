@@ -1,4 +1,4 @@
-import { $$ } from './dollr';
+import $$ from './dollrs';
 
 export default function (elements, selector) {
   elements = $$(elements);

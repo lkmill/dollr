@@ -1,4 +1,4 @@
-import { $$ } from './dollr';
+import $$ from './dollrs';
 
 export default function is(element, ufo) {
   return (!ufo || typeof ufo === 'string' && element.matches && element.matches(ufo)) ||

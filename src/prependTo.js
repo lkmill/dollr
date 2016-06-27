@@ -1,4 +1,4 @@
-import { $$ } from './dollr';
+import $$ from './dollrs';
 
 export default function prependTo(element, reference) {
   if (element instanceof Node) {

@@ -1,4 +1,4 @@
-import { $$ } from './dollr';
+import $$ from './dollrs';
 import is from './is';
 
 export default function closest(ref, ufo, stop) {

@@ -3,12 +3,12 @@
   "version": "0.0.7",
   "description": "DOM library",
   "main": "dollr.js",
-  "jsnext:main": "es/dollr.js",
+  "jsnext:main": "es/index.js",
   "scripts": {
     "clean": "rimraf *.js es lib dist",
     "lint": "eslint src",
-    "build": "npm run build:commonjs && npm run build:es",
-    "build:commonjs": "BABEL_ENV=commonjs babel src --out-dir .",
+    "build": "npm run build:cjs && npm run build:es",
+    "build:cjs": "BABEL_ENV=commonjs babel src --out-dir .",
     "build:es": "BABEL_ENV=es babel src --out-dir es",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "npm run clean && npm run lint && npm run build"
@@ -27,12 +27,12 @@
   },
   "homepage": "https://github.com/lohfu/dollr#readme",
   "devDependencies": {
-    "babel-cli": "^6.9.0",
+    "babel-cli": "^6.11.4",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-check-es2015-constants": "^6.8.0",
     "babel-plugin-transform-es2015-arrow-functions": "^6.8.0",
     "babel-plugin-transform-es2015-block-scoped-functions": "^6.8.0",
-    "babel-plugin-transform-es2015-block-scoping": "^6.9.0",
+    "babel-plugin-transform-es2015-block-scoping": "^6.10.1",
     "babel-plugin-transform-es2015-classes": "^6.9.0",
     "babel-plugin-transform-es2015-computed-properties": "^6.8.0",
     "babel-plugin-transform-es2015-destructuring": "^6.9.0",
@@ -40,21 +40,22 @@
     "babel-plugin-transform-es2015-for-of": "^6.8.0",
     "babel-plugin-transform-es2015-function-name": "^6.9.0",
     "babel-plugin-transform-es2015-literals": "^6.8.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.8.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.11.5",
     "babel-plugin-transform-es2015-object-super": "^6.8.0",
-    "babel-plugin-transform-es2015-parameters": "^6.9.0",
+    "babel-plugin-transform-es2015-parameters": "^6.11.4",
     "babel-plugin-transform-es2015-shorthand-properties": "^6.8.0",
     "babel-plugin-transform-es2015-spread": "^6.8.0",
     "babel-plugin-transform-es2015-sticky-regex": "^6.8.0",
     "babel-plugin-transform-es2015-template-literals": "^6.8.0",
     "babel-plugin-transform-es2015-typeof-symbol": "^6.8.0",
-    "babel-plugin-transform-es2015-unicode-regex": "^6.8.0",
-    "eslint": "^2.10.2",
-    "eslint-config-airbnb-base": "^3.0.1",
-    "eslint-plugin-import": "^1.8.0",
-    "rimraf": "^2.5.2"
+    "babel-plugin-transform-es2015-unicode-regex": "^6.11.0",
+    "eslint": "^3.3.1",
+    "eslint-config-airbnb-base": "^5.0.2",
+    "eslint-plugin-import": "^1.13.0",
+    "rimraf": "^2.5.4"
   },
   "dependencies": {
-    "lodash": "^4.13.0"
+    "lodash": "^4.15.0",
+    "lodash-es": "^4.15.0"
   }
 }
