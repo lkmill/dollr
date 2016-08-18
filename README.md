@@ -16,20 +16,54 @@ npm install dollr
 
 ## Use
 
+If you use ES2015 aware modules you should simply use import statements on
+`'dollr'`, ie `import { $, $$, appendTo } from 'dollr'`. If you are using
+CommonJS you should explicitly import needed modules to prevent the whole
+library being required, ie `const $ = require('dollr/dollr')` or `const appendTo = require('dollr/appendTo')`
 ```js
-import { $, $$ } from 'dollr';
+import { $, $$ } from 'dollr'
 
-$(() => console.log('dom ready'));
+$(() => console.log('dom ready'))
 
-const main = $('main');
+const main = $('main')
 
 const page = $('.page', main)
 
 if(page)
-	page.classList.add('poo');
+	page.classList.add('poo')
 
-const divs = $$('div', main);
+const divs = $$('div', main)
 ```
+
+Available functions are:
+
++ ancestors
++ append
++ appendTo
++ children
++ closest
++ create
++ descendants
++ dollr.js (referred to as `$`)
++ dollrs.js (referred to as `$$`)
++ empty
++ index
++ insertAfter
++ insertBefore
++ is
++ \_iterate
++ nextAll
++ next
++ off
++ on
++ prependTo
++ prevAll
++ prev
++ replaceWith
++ text
++ trigger
++ unwrap
++ wrap
 
 ### $(fnc)
 
