@@ -1,18 +1,18 @@
-import $$ from './dollrs';
-import is from './is';
+import $$ from './dollrs'
+import is from './is'
 
 export default function closest(ref, ufo, stop) {
   function recurse(element) {
     if (!element || stop && is(element, stop) || element === document.documentElement) {
-      return null;
+      return null
     } else if (is(element, ufo)) {
-      return element;
+      return element
     }
 
-    return recurse(element.parentNode);
+    return recurse(element.parentNode)
   }
 
-  if (ufo instanceof NodeList || ufo instanceof HTMLCollection) ufo = $$(ufo);
+  if (ufo instanceof NodeList || ufo instanceof HTMLCollection) ufo = $$(ufo)
 
-  return recurse(ref);
+  return recurse(ref)
 }

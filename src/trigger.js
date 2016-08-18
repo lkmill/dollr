@@ -3,5 +3,5 @@ export default function trigger(element, str) {
     'view': window,
     'bubbles': true,
     'cancelable': true
-  }));
+  }))
 }

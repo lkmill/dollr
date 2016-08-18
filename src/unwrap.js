@@ -1,11 +1,11 @@
-import insertBefore from './insertBefore';
+import insertBefore from './insertBefore'
 
 export default function unwrap(element) {
-  const parent = element.parentNode;
+  const parent = element.parentNode
 
   while (parent.firstChild) {
-    insertBefore(parent.firstChild, parent);
+    insertBefore(parent.firstChild, parent)
   }
 
-  parent.remove();
+  parent.remove()
 }
