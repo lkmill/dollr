@@ -2,6 +2,7 @@
   "extends": "airbnb-base",
 
   "rules": {
+    "no-mixed-operators": 0,
     "semi": [ 2, "never" ],
     "no-cond-assign": 0,
     "no-restricted-syntax": 0,
@@ -34,8 +35,8 @@
     "spaced-comment": 0,
     "strict": [ 2, "global" ]
   },
-
-  globals: {
-    "$": true
+  
+  "env": {
+    "browser": true
   }
 }
