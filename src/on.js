@@ -2,8 +2,10 @@ import $$ from './dollrs'
 
 function addEvent(element, event, listener, params) {
   if (params) {
-    listener = listener.bind.apply(listener, [ element ].concat(params))
     // TODO test this
+    listener = listener.bind(element, ...params)
+  } else {
+    listener = listener.bind(element)
   }
 
   element.addEventListener(event, listener, false)
