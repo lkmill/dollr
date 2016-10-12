@@ -1,5 +1,11 @@
 {
   "env": {
+    "node": {
+      "presets": [ "es2015-node6" ],
+      "plugins": [
+        "add-module-exports"
+      ]
+    },
     "commonjs": {
       "presets": [ "es2015" ],
       "plugins": [

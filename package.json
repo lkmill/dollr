@@ -10,7 +10,7 @@
     "build": "npm run build:cjs && npm run build:es",
     "build:cjs": "BABEL_ENV=commonjs babel src --out-dir .",
     "build:es": "BABEL_ENV=es babel src --out-dir es",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "BABEL_ENV=node NODE_ENV=testing node test/without | tap-spec",
     "prepublish": "npm run clean && npm run lint && npm run build"
   },
   "repository": {
@@ -30,10 +30,14 @@
     "babel-cli": "^6.16.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.16.0",
+    "babel-preset-es2015-node6": "^0.3.0",
     "babel-preset-es2015-rollup": "^1.2.0",
+    "babel-register": "^6.16.3",
     "eslint": "^3.7.1",
     "eslint-config-airbnb-base": "^8.0.0",
     "eslint-plugin-import": "^2.0.1",
-    "rimraf": "^2.5.4"
+    "rimraf": "^2.5.4",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.2"
   }
 }
