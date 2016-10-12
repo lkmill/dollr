@@ -53,9 +53,5 @@
     "eslint-config-airbnb-base": "^5.0.2",
     "eslint-plugin-import": "^1.13.0",
     "rimraf": "^2.5.4"
-  },
-  "dependencies": {
-    "lodash": "^4.15.0",
-    "lodash-es": "^4.15.0"
   }
 }

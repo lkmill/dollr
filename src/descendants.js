@@ -25,7 +25,7 @@
  * @return {Node[]} An array containing all matched descendants
  */
 
-import without from 'lodash/without'
+import without from './_without'
 import ancestors from './ancestors'
 import is from './is'
 
@@ -125,7 +125,7 @@ export default function descendants(element, opts) {
       // we are traversing more than one level, and only want the deepest nodes
       // to be returned so remove all ancestor nodes to `node` from `nodes`
       // TODO remove lodash and jQuery use
-      nodes = without(...nodes, ...ancestors(node, opts.selector, element))
+      nodes = without(nodes, ...ancestors(node, opts.selector, element))
     }
     nodes.push(node)
   }
