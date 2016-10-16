@@ -4,7 +4,7 @@ export default function $$(ufo, context) {
   if (typeof ufo === 'string') {
     // if it seems to be HTML, create an elements
     if (/^\s*</.test(ufo)) {
-      return create(ufo);
+      return $$(create(ufo));
     }
 
     if (context) {
@@ -18,7 +18,7 @@ export default function $$(ufo, context) {
   } else if (ufo instanceof Array) {
     return ufo;
   } else if (ufo instanceof NodeList || ufo instanceof HTMLCollection) {
-    return Array.prototype.slice.call(ufo);
+    return Array.from(ufo);
   }
 
   return [];
