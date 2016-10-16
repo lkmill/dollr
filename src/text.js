@@ -1,7 +1,7 @@
-import $$ from './dollrs'
+import $$ from './dollrs';
 
-export default function (elements, selector) {
-  elements = $$(elements)
+export default function text(elements) {
+  elements = $$(elements);
 
-  return elements.reduce((result, element) => result + element.textContent.trim(), '')
+  return elements.reduce((result, element) => result + element.textContent.trim(), '');
 }

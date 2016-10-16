@@ -1,11 +1,13 @@
-export default function (element, selector) {
-  let next = element.nextSibling
+export default function next(element, selector) {
+  let nextElement = element.nextSibling;
 
-  while (next && next.nodeType !== 1)
-    next = next.nextSibling
+  while (nextElement && nextElement.nodeType !== 1) {
+    nextElement = nextElement.nextSibling;
+  }
 
-  if (next && selector && !next.matches(selector))
-    next = undefined
+  if (nextElement && selector && !nextElement.matches(selector)) {
+    nextElement = undefined;
+  }
 
-  return next
+  return nextElement;
 }

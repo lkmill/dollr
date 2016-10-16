@@ -1,10 +1,11 @@
-import $$ from './dollrs'
+import $$ from './dollrs';
 
 export default function (element, selector) {
-  let children = element ? $$(element.children) : []
+  let children = element ? $$(element.children) : [];
 
-  if (selector)
-    children = children.filter((child) => child.matches(selector))
+  if (selector) {
+    children = children.filter((child) => child.matches(selector));
+  }
 
-  return children
+  return children;
 }

@@ -1,13 +1,13 @@
-import closest from './closest'
+import closest from './closest';
 
-export default function (ref, ufo, stop) {
-  const ancestors = []
+export default function ancestors(ref, ufo, stop) {
+  const elements = [];
 
-  let node = ref
+  let node = ref;
 
   while (node = closest(node.parentNode, ufo, stop)) {
-    ancestors.push(node)
+    elements.push(node);
   }
 
-  return ancestors
+  return elements;
 }
