@@ -3,11 +3,5 @@ export default function without(arr, ...args) {
     arr = Array.from(arr);
   }
 
-  return arr.reduce((result, val) => {
-    if (!args.includes(val)) {
-      result.push(val);
-    }
-
-    return result;
-  }, []);
+  return arr.filter((val) => !args.includes(val));
 }
