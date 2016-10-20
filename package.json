@@ -11,7 +11,8 @@
     "build:cjs": "BABEL_ENV=cjs babel src --out-dir .",
     "build:es": "BABEL_ENV=es babel src --out-dir es",
     "test": "BABEL_ENV=node NODE_ENV=testing node test/without | tap-spec",
-    "prepublish": "npm run clean && npm run lint && npm run build"
+    "prepublish": "npm run clean && npm run lint && npm run build",
+    "preversion": "npm run lint"
   },
   "repository": {
     "type": "git",
