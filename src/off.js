@@ -10,6 +10,7 @@ export default function off(element, eventString, listener) {
       }
     }
   } else {
+    // eslint-disable-next-line
     for (const eventType in element.__events) {
       for (const _listener of element.__events[eventType]) {
         arr.push([eventString, _listener]);
