@@ -16,23 +16,42 @@ npm install dollr
 
 ## Use
 
-If you use ES2015 aware modules you should simply use import statements on
-`'dollr'`, ie `import { $, $$, appendTo } from 'dollr'`. If you are using
-CommonJS you should explicitly import needed modules to prevent the whole
-library being required, ie `const $ = require('dollr/dollr')` or `const appendTo = require('dollr/appendTo')`
+## ES2015 Modules
+
+If using ES2015 aware modules, simply use import statements on
+`'dollr'`, ie:
+
 ```js
-import { $, $$ } from 'dollr'
+import { $, $$, appendTo } from 'dollr';
+```
 
-$(() => console.log('dom ready'))
+## CommonJS
 
-const main = $('main')
+If you are using CommonJS bundlers you should explicitly import needed modules
+to prevent the whole library being required, ie:
 
-const page = $('.page', main)
+```js
+const $ = require('dollr/dollr')
+const $$ = require('dollr/dollrs');
+const appendTo = require('dollr/appendTo');
+```
 
-if(page)
-	page.classList.add('poo')
+Small example:
 
-const divs = $$('div', main)
+```js
+import { $, $$ } from 'dollr';
+
+$(() => console.log('dom ready'));
+
+const main = $('main');
+
+const page = $('.page', main);
+
+if(page) {
+	page.classList.add('poo');
+}
+
+const divs = $$('div', main);
 ```
 
 Available functions are:
@@ -60,10 +79,14 @@ Available functions are:
 + prevAll
 + prev
 + replaceWith
++ siblings
 + text
 + trigger
 + unwrap
++ \_without
 + wrap
+
+## Methods Overview
 
 ### $(fnc)
 
