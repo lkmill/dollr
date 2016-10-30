@@ -1,6 +1,7 @@
 {
   "rules": {
     "arrow-parens": [2, "always"],
+    "consistent-return": 0,
     "func-names": 0,
     "no-cond-assign": 0,
     "no-console": [1, { "allow": ["warn", "error", "info"] }],
