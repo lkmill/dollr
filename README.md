@@ -2,21 +2,37 @@
 
 dollr is a very simple, flexible and lightweight DOM helper library.
 
-Lots more code coming soon.
-
 ## Why?
 
-Because.
+While there is seldom an actual real use for jQuery these days, there
+are still a large amount of websites that are too simple for using a framework
+but too complex to write in vanilla JavaScript.
+
+dollr is a collection of useful DOM querying and manipulation methods that most
+often try to emulate their jQuery counterparts. However, instead of always
+loading the entire library, dollr is solely built to work with bundlers such as
+[Rollup](https://github.com/rollup/rollup) or
+[Webpack](https://github.com/webpack). Thus, it allows you to pick the
+functionality needed, and only bundle that.
+
+dollr does not aim to be backwards compatible; the main goal is to make each
+isolated module and the package as a whole as light as possible. Proper shims
+are required for dollr to function in legacy browsers.
 
 ## Installation
 
 ```
-npm install dollr
+$ npm install dollr
 ```
 
 ## Use
 
-## ES2015 Modules
+dollr is intended to be used with a bundler, such as
+[Rollup](https://github.com/rollup/rollup),
+[Webpack](https://github.com/webpack/webpack) or
+[Browserify](https://github.com/substack/node-browserify).
+
+### ES2015 Modules
 
 If using ES2015 aware modules, simply use import statements on
 `'dollr'`, ie:
@@ -25,7 +41,23 @@ If using ES2015 aware modules, simply use import statements on
 import { $, $$, appendTo } from 'dollr';
 ```
 
-## CommonJS
+There is no default export, and 
+
+```js
+import * as $  from 'dollr';
+```
+
+Gives you an object with all available methods, ie:
+
+```js
+import * as $  from 'dollr';
+
+const main = $.$('main');
+
+$.appendTo($.$$('<p>One</p><p>Two</p>'), main);
+```
+
+### CommonJS
 
 If you are using CommonJS bundlers you should explicitly import needed modules
 to prevent the whole library being required, ie:
@@ -54,7 +86,7 @@ if(page) {
 const divs = $$('div', main);
 ```
 
-Available functions are:
+## Available Methods
 
 + ancestors
 + append
@@ -86,7 +118,23 @@ Available functions are:
 + \_without
 + wrap
 
-## Methods Overview
+## No Chaining
+
+Since no special objects are created and each function
+takes the element as an argument, chaining is not possible
+in dollr.
+
+## No AJAX
+
+jQuery's AJAX functionality is not available in dollr. Instead, we recommend
+using the [Fetch
+API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) with the
+[appropriate polyfill](https://github.com/github/fetch) for legacy browsers.
+
+## Methods Description
+
+This is currently an __inexhaustive__ list of descriptions of how the methods
+provided by dollr work.
 
 ### $(fnc)
 
