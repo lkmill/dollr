@@ -26,6 +26,7 @@ export { default as replaceWith } from './replaceWith.js';
 export { default as scrollIntoView } from './scrollIntoView.js';
 export { default as scrollTo } from './scrollTo.js';
 export { default as siblings } from './siblings.js';
+export { default as suppress } from './suppress.js';
 export { default as text } from './text.js';
 export { default as trigger } from './trigger.js';
 export { default as unwrap } from './unwrap.js';
